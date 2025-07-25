@@ -1,248 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website Footer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
-        /* Basic Body Styling (for context) */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* Ensures footer sticks to bottom if content is short */
-        }
+      /* Basic Body Styling (for context) */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Ensures footer sticks to bottom if content is short */
+      }
 
-        .content {
-            flex: 1; /* Allows content area to grow and push footer down */
-            padding: 20px;
-        }
+      .content {
+        flex: 1; /* Allows content area to grow and push footer down */
+        padding: 20px;
+      }
 
-        /* Footer Styles */
-        .site-footer {
-            background-color: #2c3e50; /* Dark background color */
-            color: #bdc3c7; /* Light grey text color */
-            padding: 45px 0 20px;
-            font-size: 15px;
-            line-height: 24px;
-        }
+      /* Footer Styles */
+      .site-footer {
+        background-color: #2c3e50; /* Dark background color */
+        color: #bdc3c7; /* Light grey text color */
+        padding: 45px 0 20px;
+        font-size: 15px;
+        line-height: 24px;
+      }
 
-        .site-footer .container {
-            max-width: 1170px;
-            margin: auto;
-            padding: 0 15px;
-        }
+      .site-footer .container {
+        max-width: 1170px;
+        margin: auto;
+        padding: 0 15px;
+      }
 
-        .site-footer .row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 20px; /* Space between columns */
-        }
+      .site-footer .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px; /* Space between columns */
+      }
 
+      .site-footer .footer-col {
+        flex: 1; /* Allows columns to share space */
+        min-width: 250px; /* Minimum width before wrapping */
+        padding: 0 15px;
+        margin-bottom: 30px;
+      }
+
+      .site-footer h6 {
+        color: #fff;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-top: 5px;
+        letter-spacing: 1px;
+        border-bottom: 2px solid #737373;
+        padding-bottom: 8px;
+        margin-bottom: 20px;
+      }
+
+      .site-footer p.text-justify,
+      .site-footer .contact-info p {
+        margin-bottom: 10px;
+      }
+
+      .site-footer a {
+        color: #73a0d4; /* A slightly brighter blue for links */
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .site-footer a:hover {
+        color: #ecf0f1; /* Lighter color on hover */
+        text-decoration: underline;
+      }
+
+      .footer-links {
+        padding-left: 0;
+        list-style: none;
+      }
+
+      .footer-links li {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .footer-links a {
+        color: #bdc3c7;
+      }
+      .footer-links a:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+      .footer-links a::before {
+        content: ">";
+        margin-right: 8px;
+        color: #737373;
+      }
+
+      .social-icons {
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+        text-align: left; /* Align icons left in their column */
+      }
+
+      .social-icons li {
+        display: inline-block;
+        margin-right: 15px;
+      }
+      .social-icons li:last-child {
+        margin-right: 0;
+      }
+
+      .social-icons a {
+        background-color: #34495e; /* Slightly lighter background for icons */
+        color: #ecf0f1;
+        font-size: 18px;
+        display: inline-block;
+        line-height: 44px;
+        width: 44px;
+        height: 44px;
+        text-align: center;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        background-color: #73a0d4; /* Highlight color on hover */
+        color: #000000;
+        text-decoration: none;
+      }
+
+      .copyright-text {
+        border-top: 1px solid #444;
+        padding-top: 20px;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 13px;
+        color: #888;
+      }
+      .copyright-text a {
+        color: #aaa;
+      }
+      .copyright-text a:hover {
+        color: #fff;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
         .site-footer .footer-col {
-            flex: 1; /* Allows columns to share space */
-            min-width: 250px; /* Minimum width before wrapping */
-            padding: 0 15px;
-            margin-bottom: 30px;
+          min-width: 100%; /* Stack columns on smaller screens */
+          text-align: center;
         }
-
         .site-footer h6 {
-            color: #fff;
-            font-size: 18px;
-            text-transform: uppercase;
-            margin-top: 5px;
-            letter-spacing: 1px;
-            border-bottom: 2px solid #737373;
-            padding-bottom: 8px;
-            margin-bottom: 20px;
+          text-align: center;
+          border-bottom: none;
         }
-
-        .site-footer p.text-justify,
-        .site-footer .contact-info p {
-            margin-bottom: 10px;
+        .site-footer h6::after {
+          content: "";
+          display: block;
+          width: 50px;
+          height: 2px;
+          background: #737373;
+          margin: 10px auto 0;
         }
-
-        .site-footer a {
-            color: #73a0d4; /* A slightly brighter blue for links */
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .site-footer a:hover {
-            color: #ecf0f1; /* Lighter color on hover */
-            text-decoration: underline;
-        }
-
-        .footer-links {
-            padding-left: 0;
-            list-style: none;
-        }
-
-        .footer-links li {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: #bdc3c7;
-        }
-        .footer-links a:hover {
-            color: #fff;
-            text-decoration: none;
-        }
-         .footer-links a::before {
-            content: '>';
-            margin-right: 8px;
-            color: #737373;
-        }
-
         .social-icons {
-            list-style: none;
-            padding: 0;
-            margin-top: 20px;
-            text-align: left; /* Align icons left in their column */
+          text-align: center;
         }
-
-        .social-icons li {
-            display: inline-block;
-            margin-right: 15px;
+        .footer-links {
+          text-align: center;
         }
-        .social-icons li:last-child {
-            margin-right: 0;
+        .footer-links a::before {
+          content: "";
+          margin-right: 0;
         }
-
-        .social-icons a {
-            background-color: #34495e; /* Slightly lighter background for icons */
-            color: #ecf0f1;
-            font-size: 18px;
-            display: inline-block;
-            line-height: 44px;
-            width: 44px;
-            height: 44px;
-            text-align: center;
-            border-radius: 50%;
-            transition: background-color 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            background-color: #73a0d4; /* Highlight color on hover */
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .copyright-text {
-            border-top: 1px solid #444;
-            padding-top: 20px;
-            margin-top: 20px;
-            text-align: center;
-            font-size: 13px;
-            color: #888;
-        }
-         .copyright-text a {
-            color: #aaa;
-         }
-         .copyright-text a:hover {
-            color: #fff;
-         }
-
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            .site-footer .footer-col {
-                min-width: 100%; /* Stack columns on smaller screens */
-                text-align: center;
-            }
-             .site-footer h6 {
-                text-align: center;
-                border-bottom: none;
-             }
-             .site-footer h6::after {
-                content: '';
-                display: block;
-                width: 50px;
-                height: 2px;
-                background: #737373;
-                margin: 10px auto 0;
-             }
-            .social-icons {
-                text-align: center;
-            }
-             .footer-links {
-                 text-align: center;
-             }
-              .footer-links a::before {
-                content: '';
-                margin-right: 0;
-            }
-        }
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="content">
-        <h1>Main Page Content</h1>
-        <p>This is where the main content of your webpage will be. The footer will appear below this.</p>
-        <p>...</p>
-        <p>...</p>
-        <p>...</p>
+      <h1>Main Page Content</h1>
+      <p>
+        This is where the main content of your webpage will be. The footer will
+        appear below this.
+      </p>
+      <p>...</p>
+      <p>...</p>
+      <p>...</p>
     </div>
 
     <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h6>About Us</h6>
-                    <p class="text-justify">Formula Vikes Racing is Cleveland State University's Formula SAE team. We are a dedicated group of students designing, building, and competing with an open-wheel race car in the international SAE competition.</p>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h6>About Us</h6>
+            <p class="text-justify">
+              Formula Vikes Racing is Cleveland State University's Formula SAE
+              team. We are a dedicated group of students designing, building,
+              and competing with an open-wheel race car in the international SAE
+              competition.
+            </p>
+          </div>
 
-                <div class="footer-col">
-                    <h6>Contact Us</h6>
-                    <div class="contact-info">
-                        <p><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> <b>Address:</b><br>
-                           Washkewicz College of Engineering<br>
-                           Cleveland State University<br>
-                           2121 Euclid Ave<br>
-                           Cleveland, OH 44115</p>
-                        <p><i class="fas fa-envelope" style="margin-right: 8px;"></i> <b>Email:</b><br>
-                           <a href="mailto:csuformulae@gmail.com">csuformulae@gmail.com</a></p>
-                        </div>
-                </div>
-
-                <div class="footer-col">
-                    <h6>Quick Links</h6>
-                    <ul class="footer-links">
-                        <li><a href="/about/">About Us</a></li>
-                        <li><a href="/team/">The Team</a></li>
-                        <li><a href="/sponsorship/">Sponsorship</a></li>
-                        <li><a href="/gallery/">Gallery</a></li>
-                        <li><a href="/contact/">Contact Us</a></li>
-                        <li><a href="https://engineering.csuohio.edu/" target="_blank" rel="noopener noreferrer">CSU Engineering</a></li>
-                    </ul>
-                </div>
-
-                 <div class="footer-col">
-                    <h6>Follow Us</h6>
-                     <p>Stay up to date with our progress:</p>
-                    <ul class="social-icons">
-                        <li><a class="instagram" href="https://www.instagram.com/vikingsformula/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
-                        <li><a class="linkedin" href="https://www.linkedin.com/company/vikings-formula/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
-                </div>
+          <div class="footer-col">
+            <h6>Contact Us</h6>
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-map-marker-alt" style="margin-right: 8px"></i>
+                <b>Address:</b><br />
+                Washkewicz College of Engineering<br />
+                Cleveland State University<br />
+                2121 Euclid Ave<br />
+                Cleveland, OH 44115
+              </p>
+              <p>
+                <i class="fas fa-envelope" style="margin-right: 8px"></i>
+                <b>Email:</b><br />
+                <a href="mailto:csuformulae@gmail.com">csuformulae@gmail.com</a>
+              </p>
             </div>
-            <hr style="border-top: 1px solid #444; margin: 30px 0;">
+          </div>
+
+          <div class="footer-col">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="/about/">About Us</a></li>
+              <li><a href="/team/">The Team</a></li>
+              <li><a href="/sponsorship/">Sponsorship</a></li>
+              <li><a href="/gallery/">Gallery</a></li>
+              <li><a href="/contact/">Contact Us</a></li>
+              <li>
+                <a
+                  href="https://engineering.csuohio.edu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >CSU Engineering</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h6>Follow Us</h6>
+            <p>Stay up to date with our progress:</p>
+            <ul class="social-icons">
+              <li>
+                <a
+                  class="instagram"
+                  href="https://www.instagram.com/vikingsformula/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="linkedin"
+                  href="https://www.linkedin.com/company/vikings-formula/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="footer-col" style="flex-basis: 100%; text-align:center; margin-bottom: 0;">
-                    <p class="copyright-text">Copyright &copy; 2025 All Rights Reserved by
-                        <a href="#">Formula Vikes Racing</a>.
-                    </p>
-                </div>
-            </div>
+        <hr style="border-top: 1px solid #444; margin: 30px 0" />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div
+            class="footer-col"
+            style="flex-basis: 100%; text-align: center; margin-bottom: 0"
+          >
+            <p class="copyright-text">
+              Copyright &copy; 2025 All Rights Reserved by
+              <a href="#">Formula Vikes Racing</a>.
+            </p>
+          </div>
         </div>
+      </div>
     </footer>
-
-</body>
+  </body>
 </html>
