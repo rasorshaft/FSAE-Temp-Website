@@ -322,3 +322,16 @@ footer .copyright-text a:hover {
         margin-right: 0;
     }
 }
+
+footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.footer-col {
+    flex: 1 1 200px;
+    min-width: 220px;
+    margin-bottom: 20px;
+}
