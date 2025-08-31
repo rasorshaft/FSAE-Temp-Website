@@ -249,8 +249,9 @@
         .bronze-sponsors h1 {
             font-size: 2.5em;
             font-weight: bold;
-            bottom: 20px;
-            padding: auto;
+            letter-spacing: 2px;
+            color: rgb(255, 115, 0);
+            margin-bottom: 20px;
         }
 
         /* Responsive Adjustments */
@@ -283,13 +284,30 @@
             }
         }
 
-        .bronze-sponsors img {
-            width: 350px;
-            height: 300px;
-            object-fit: contain;
-            margin: 5px;
-            display: inline-block;
+        .bronze-sponsors div {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            justify-items: center;
+            align-items: center;
         }
+
+        .bronze-sponsors img {
+            width: 250px;
+            height: 200px;
+            object-fit: contain;
+            align-items: center;
+        }
+
+        .sponsor-divider {
+            border: none;
+            border-top: 3px solid black;
+            margin: 40px 0;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
 
     </style>
 
@@ -326,22 +344,25 @@
     </div>
 
     <div class="container_1">
-
+        
         <section class="founding-sponsors">
-            <h1>Founding Sponsors</h1>
+            <h1>FOUNDING SPONSORS</h1>
             <p>Mike and Amy Sturdevant in honor of the Mark Sturdevant '19 Endowed Scholarship</p>
             <img src="./images/wDrZJpSnhv8zAAAAABJRU5ErkJggg.webp" alt="">
         </section>
 
+        <hr class="sponsor-divider">
+
         <section class="bronze-sponsors" class="col sqs-col-12 span-12">
             <h1>BRONZE SPONSORS</h1>
             <div>
-                <img src="/images/dti.jpg" alt="">
-                <img src="/images/alrosteel.png" alt="">
-                <img src="/images/calspan.png" alt="">
-                <img src="/images/emrax.png" alt="">
-                <img src="/images/evwest.jpg" alt="">
-                <img src="/images/Polymaker_New_Logo.png" alt="">
+                <a href="https://www.drivetraininnovation.com/"><img src="/images/dti.jpg" alt=""></a>
+                <a href="https://www.alro.com/"><img src="/images/alrosteel.png" alt=""></a>
+                <a href="https://calspan.com/"><img src="/images/Calspan_-_Red_and_Black.png" alt=""></a>
+                <a href="https://emrax.com/"><img src="/images/emrax.png" alt=""></a>
+                <a href="https://evwest.com/"><img src="/images/evwest.jpg" alt=""></a>
+                <a href="https://polymaker.com/"><img src="/images/Polymaker_New_Logo.png" alt=""></a>
+                <a href="https://www.rewarner.com/"><img src="/images/rewarner.jpg" alt=""></a>
             </div>
         </section>
 
