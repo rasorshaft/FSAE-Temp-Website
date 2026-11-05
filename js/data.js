@@ -122,6 +122,12 @@ window.initialAppData = {
       id: "ev-west"
     },
     {
+      name: "MatterHackers",
+      image: "/images/Bronze/MatterHackers_Logo_Blue.png",
+      glowColor: "rgba(205,127,50,0.45)", // Bronze
+      id: "matterhackers"
+    },
+    {
       name: "Polymaker",
       image: "/images/Bronze/Polymaker_New_Logo.png",
       glowColor: "rgba(205,127,50,0.45)", // Bronze
