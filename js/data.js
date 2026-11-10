@@ -154,11 +154,11 @@ window.initialAppData = {
   ],
   // This is for the Update Section of the website
   updates: [
-    "images/UpdatePhoto/LDW_0782.JPG",
-    "images/UpdatePhoto/LDW_0792.JPG",
-    "images/UpdatePhoto/LDW_0907.JPG",
-    "images/UpdatePhoto/LDW_0913.JPG",
-    "images/UpdatePhoto/LDW_1056.JPG",
-    "images/UpdatePhoto/LDW_1095.JPG"
+    "images/UpdatePhoto/LDW_0782.webp",
+    "images/UpdatePhoto/LDW_0792.webp",
+    "images/UpdatePhoto/LDW_0907.webp",
+    "images/UpdatePhoto/LDW_0913.webp",
+    "images/UpdatePhoto/LDW_1056.webp",
+    "images/UpdatePhoto/LDW_1095.webp"
   ]
 };
